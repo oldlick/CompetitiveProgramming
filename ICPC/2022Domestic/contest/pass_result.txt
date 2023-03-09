@@ -1,0 +1,121 @@
+Tokyo Institute of Technology 
+The University of Tokyo 
+Kyoto University 
+Osaka University 
+Tohoku University 
+University of Tsukuba 
+Saitama University 
+Waseda University 
+University of Aizu 
+University of Yamanashi 
+Keio University 
+Tokyo University of Agriculture and Technology 
+Chiba University 
+Hokkaido University 
+Doshisha University 
+Shiga University 
+National Institute of Technology, Ichinoseki College 
+Tokyo University of Science 
+Shizuoka University 
+Nagoya University 
+Toyohashi University of Technology 
+The University of Electro-Communications 
+Ibaraki University 
+Yokohama National University 
+Senshu University 
+Nagoya Institute of Technology 
+Kyushu University 
+Shibaura Institute of Technology 
+Nara National College of Technology 
+Tokyo Metropolitan University 
+National Institute of Technology, Matsue College 
+Ritsumeikan University 
+Osaka Metropolitan University 
+Mie University 
+Toyo University 
+Yamaguchi University 
+Meiji University 
+Toyota Technological Institute 
+Meijo University 
+Chuo University 
+University of Fukui 
+Seikei University 
+Kyushu Institute of Technology 
+National Institute of Technology, Kagawa College 
+Kochi University of Technology 
+Future University Hakodate 
+Nihon University 
+Kwansei Gakuin University 
+University of Toyama 
+Kyoto Sangyo University 
+Hosei University 
+Tokyo City University 
+Sophia University 
+University of Hyogo 
+Kumamoto University 
+Ochanomizu University 
+Kogakuin University 
+Shiga University of Medical Science 
+Hiroshima University 
+Osaka Electro-Communication University 
+Osaka Institute of Technology 
+Ryukoku University 
+University of Nagasaki 
+Shonan Institute of Technology 
+Kagawa University 
+Aichi Institute of Technology 
+Konan University 
+Kansai-University 
+Kanazawa Institute of Technology 
+Tsuda University 
+Japan Women's University 
+Niigata University of International and Information studies 
+Nara Women's University 
+Osaka Gakuin University 
+Okayama University of Science 
+Kanagawa Institute of Technology 
+Tohoku Gakuin University 
+Kagoshima University 
+Fukuoka Institute of Technology 
+Nagaoka University of Technology 
+Dokkyo University 
+Okayama Prefectural University 
+1 1 tonosama  Tokyo Institute of Technology  1
+2 2 Time Manipulators  The University of Tokyo  1
+3 3 oraCle_MaChine  The University of Tokyo  2
+4 4 Heno World  Kyoto University  1
+5 5 KOMOREBI  The University of Tokyo  3
+6 6 Girigiri_yellows  Osaka University  1
+7 7 DELIAIR  The University of Tokyo  4
+8 8 SPJ  The University of Tokyo  5
+9 9 KUB1pp  Kyoto University  2
+10 10 The Raspberry Candies  The University of Tokyo  6
+11 11 TLE_WARLD  Osaka University  2
+12 12 Bu-Bu-Du-Ke  Kyoto University  3
+13 13 Aobayama_dropout  Tohoku University  1
+14 14 ousama_pngn  Tokyo Institute of Technology  2
+15 15 otagai_tasukeai  University of Tsukuba  1
+16 16 Maximum-goodlife9  Saitama University  1
+17 18 Give us sociability  Waseda University  1
+18 19 MSB  Waseda University  2
+19 20 ei13333333333333  University of Aizu  1
+20 22 haunting  University of Yamanashi  1
+21 23 Anrirled  Keio University  1
+22 25 nowcow  Tokyo University of Agriculture and Technology  1
+23 26 suzukaze_Aobayama  Tohoku University  2
+24 28 CUPC  Chiba University  1
+25 30 Tokishirazu  Hokkaido University  1
+26 31 icecream  Doshisha University  1
+27 32 BiWACoder  Shiga University  1
+28 33 Tsuruga_MLE  University of Aizu  2
+29 34 Toukyou Daigaku  National Institute of Technology, Ichinoseki College  1
+30 35 Spring Curve  Tokyo University of Science  1
+31 40 HamsterHeaven  Shizuoka University  1
+32 42 flow-chow  Nagoya University  1
+33 45 TUTankhamun  Toyohashi University of Technology  1
+34 46 Kidamari Sketch  The University of Electro-Communications  1
+35 47 thorny castle  Ibaraki University  1
+36 48 Tsubaki  Yokohama National University  1
+37 50 Senshu  Senshu University  1
+38 52 tebasaki  Nagoya Institute of Technology  1
+39 53 heap_q  Kyushu University  1

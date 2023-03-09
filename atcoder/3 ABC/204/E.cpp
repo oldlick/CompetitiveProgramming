@@ -1,0 +1,126 @@
+//ver 8.1
+#include <bits/stdc++.h>
+using namespace std;
+void init() {cin.tie(0);ios::sync_with_stdio(false);cout << fixed << setprecision(15);}
+using ll = long long;
+using ld = long double;
+using vl = vector<ll>;
+using vd = vector<ld>;
+using vs = vector<string>;
+using vb = vector<bool>;
+using vvl = vector<vector<ll>>;
+using vvd = vector<vector<ld>>;
+using vvs = vector<vector<string>>;
+using vvb = vector<vector<bool>>;
+using pll = pair<ll,ll>;
+using mll = map<ll,ll>;
+template<class T> using V = vector<T>;
+template<class T> using VV = vector<vector<T>>;
+#define each(x,v) for(auto& x : (v))
+#define reps(i,a,b) for(ll i=(ll)(a);i<(ll)(b);i++)
+#define rep(i,n) for(ll i=0;i<(ll)(n);i++)
+#define pb push_back
+#define eb emplace_back
+#define fi first
+#define se second
+#define mp make_pair
+const ll INF = 1LL << 60;
+#define CLR(mat,f) memset(mat, f, sizeof(mat))
+#define IN(a, b, x) ((a)<=(x)&&(x)<=(b))
+#define UNIQUE(v) v.erase( unique(v.begin(), v.end()), v.end() ) //被り削除
+#define debug cout << "line : " << __LINE__ << " debug" << endl;
+#define ini(...) int __VA_ARGS__; in(__VA_ARGS__)
+#define inl(...) long long __VA_ARGS__; in(__VA_ARGS__)
+#define ind(...) long double __VA_ARGS__; in(__VA_ARGS__)
+#define ins(...) string __VA_ARGS__; in(__VA_ARGS__)
+#define inc(...) char __VA_ARGS__; in(__VA_ARGS__)
+void in(){}
+template <typename T,class... U> void in(T &t,U &...u){ cin >> t; in(u...);}
+template <typename T> void in1(T &s) {rep(i,s.size()){in(s[i]);}}
+template <typename T> void in2(T &s,T &t) {rep(i,s.size()){in(s[i],t[i]);}}
+template <typename T> void in3(T &s,T &t,T &u) {rep(i,s.size()){in(s[i],t[i],u[i]);}}
+template <typename T> void in4(T &s,T &t,T &u,T &v) {rep(i,s.size()){in(s[i],t[i],u[i],v[i]);}}
+template <typename T> void in5(T &s,T &t,T &u,T &v,T &w) {rep(i,s.size()){in(s[i],t[i],u[i],v[i],w[i]);}}
+void out(){cout << endl;}
+template <typename T,class... U> void out(const T &t,const U &...u){cout << t; if(sizeof...(u)) cout << " "; out(u...);}
+void die(){cout << endl;exit(0);}
+template <typename T,class... U> void die(const T &t,const U &...u){cout << t; if(sizeof...(u)) cout << " "; die(u...);}
+template <typename T> void outv(T s) {rep(i,s.size()){if(i!=0)cout<<" ";cout<<s[i];}cout<<endl;}
+template <typename T> void out1(T s) {rep(i,s.size()){out(s[i]);}}
+template <typename T> void out2(T s,T t) {rep(i,s.size()){out(s[i],t[i]);}}
+template <typename T> void out3(T s,T t,T u) {rep(i,s.size()){out(s[i],t[i],u[i]);}}
+template <typename T> void out4(T s,T t,T u,T v) {rep(i,s.size()){out(s[i],t[i],u[i],v[i]);}}
+template <typename T> void out5(T s,T t,T u,T v,T w) {rep(i,s.size()){out(s[i],t[i],u[i],v[i],w[i]);}}
+#define all(v) (v).begin(),(v).end()
+#define rall(v) (v).rbegin(),(v).rend()
+template <typename T> T allSum(vector<T> a){T ans=T();each(it,a)ans+=it;return ans;}
+template<typename T> bool inside(T a,T b){auto it=a.begin()-1;each(x,b){it=find(it+1,a.end(),x);if(it==a.end())return false;}return true;}
+ll ceilDiv(ll a,ll b) {return (a+b-1)/b;}
+ld dist(pair<ld,ld> a, pair<ld,ld> b){return sqrt(abs(a.fi-b.fi)*abs(a.fi-b.fi)+abs(a.se-b.se)*abs(a.se-b.se));} // ２点間の距離 
+ll gcd(ll a, ll b) { return b != 0 ? gcd(b, a % b) : a; }
+ll lcm(ll a,ll b){ return a / gcd(a,b) * b;}
+template <class A, class B> inline bool chmax(A &a, const B &b) { return b > a && (a = b, true); }
+template <class A, class B> inline bool chmin(A &a, const B &b) { return b < a && (a = b, true); }
+#define YES(n) ((n) ? "YES" : "NO"  )
+#define Yes(n) ((n) ? "Yes" : "No"  )
+#define yes(n) ((n) ? "yes" : "no"  )
+
+ll n;
+VV<V<ll>> g;
+
+ld need(ll t,ll k,V<ll> &x){
+  return x[1]+(ld)x[2]/(t+k+1)+k;
+}
+ll dis(V<ll> &x,ll t){
+  long long ok=1e11;
+  long long ng=-1;
+  while(abs(ok-ng)>1){
+    long long mid=(ok+ng)/2;
+    if(need(t,mid+1,x)-need(t,mid,x)>=0)ok=mid;
+    else ng=mid;
+  }
+  //out(ok);
+  return x[1]+(x[2]/(t+ok+1))+ok;
+}
+
+tuple<V<ll>,V<ll>> dijk(ll s){
+  priority_queue<pair<ll,ll>,vector<pair<ll,ll>>,greater<pair<ll,ll>>> q;
+  q.push(mp(0,s));
+  vector<ll> cost(n,INF);
+  vector<ll> pre(n,-1);
+  cost[s]=0;
+  while(q.size()!=0){
+    auto now=q.top();
+    q.pop();
+    if(cost[now.second]<now.first)continue;
+    each(x,g[now.second]){
+      ll d=dis(x,cost[now.second]);
+      if(cost[x[0]]>cost[now.second]+d){
+        cost[x[0]]=cost[now.second]+d;
+        pre[x[0]]=now.second;
+        q.push(mp(cost[x[0]],x[0]));
+      }
+    }
+    //outv(cost);
+  }
+  //outv(cost);
+  return {cost,pre};
+}
+
+int main(){
+  init();
+  in(n);
+  inl(m);
+  g.resize(n);
+  rep(i,m){
+    inl(a,b,c,d);a--;b--;
+    g[a].push_back({b,c,d});
+    g[b].push_back({a,c,d});
+  }
+  //out(dis(g[0][0],0));
+  //return 0;
+  auto [cost,pre]=dijk(0);
+  if(cost[n-1]==INF)out(-1);
+  else out(cost[n-1]);
+  return 0;
+}

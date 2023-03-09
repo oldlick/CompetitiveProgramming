@@ -1,0 +1,13 @@
+BasedOnStyle: Mozilla
+IndentWidth: 4
+AccessModifierOffset: -4
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: true
+ColumnLimit: 107
+BreakBeforeBraces: Custom
+BraceWrapping:
+    BeforeElse: false
+AlwaysBreakTemplateDeclarations: No
+PointerAlignment: Right
+IncludeBlocks: Merge
